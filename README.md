@@ -1,6 +1,6 @@
 # Optimized k-means clustering
 
-Shanshan Wang
+Shanshan Wang \
 shanshan.wang@uni-due.de
 
 Code for optimized kmeans clustering
