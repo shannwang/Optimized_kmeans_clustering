@@ -3,7 +3,7 @@
 Shanshan Wang \
 shanshan.wang@uni-due.de
 
-Code for optimized kmeans clustering
+Code for optimized k-means clustering
 
 ### Reference
 
