@@ -2,16 +2,18 @@
 
 Shanshan Wang \
 shanshan.wang@uni-due.de
+</br>
+</br>
 
 
-Step 1: load a sysmetrical square matrix, e.g., the reduced-rank correlation matrix of the NRW motorway network for workdays
+#### Step 1: load a sysmetrical square matrix, e.g., the reduced-rank correlation matrix of the NRW motorway network for workdays
 
 ~~~
 load('redcorr_workday.mat')
 Mat=redcorr_workday;
 ~~~
 
-Step 2: plot the matrix
+#### Step 2: plot the matrix
 ~~~ 
 colorbarset.nf='on';
 colorbarset.ticks=-1:0.1:1;
@@ -23,7 +25,7 @@ axisformat('sections','sections','','matrix with ungrouped sections',0,[],{},col
 <img src="https://github.com/shannwang/Optimized_kmeans_clustering/raw/main/matrix_ungrouped.png?raw=true" width="600"> 
 
 
-Step 3: perform optimized k-means clustering with a preset number of clusters and a random seed
+#### Step 3: perform optimized k-means clustering with a preset number of clusters and a random seed
 ~~~
 K=4;
 randnum=437; 
@@ -34,7 +36,7 @@ PlotSilhouette(clusteridx, sil);
 <img src="https://github.com/shannwang/Optimized_kmeans_clustering/raw/main/silhouette_unordered.png?raw=true" width="600"> 
 
 
-Step 4: reorder the matrix and identify the dominant eigenvector in each group according to eigenvector components
+#### Step 4: reorder the matrix and identify the dominant eigenvector in each group according to eigenvector components
 ~~~
 [reorderMat,reorderclusteridx,clustercount,matidx,pos,aveabseigvec]=ReorderMatrix(Mat,clusteridx,U);
 ~~~
@@ -42,7 +44,7 @@ Step 4: reorder the matrix and identify the dominant eigenvector in each group a
 
 
 
-Step 5:  plot the reduced-rank matrix correlation matrix with grouped sections
+#### Step 5:  plot the reduced-rank matrix correlation matrix with grouped sections
 ~~~
 figure(4)
 imagesc(reorderMat,[-0.4 0.4])
@@ -61,7 +63,7 @@ xticklabels({'G1','G2','G3','G4','G5','G6'})
 <img src="https://github.com/shannwang/Optimized_kmeans_clustering/raw/main/matrix_grouped.png?raw=true" width="600"> 
 
 
-Step 6: plot silhouette values with reodered groups
+#### Step 6: plot silhouette values with reodered groups
 ~~~
 figure(5)
 PlotSilhouette(orderclusteridx, sil);
