@@ -1,9 +1,18 @@
-# Optimized k-means clustering
+# Tutorial for using optimized k-means clustering
 
 Shanshan Wang \
 shanshan.wang@uni-due.de
 
-Code for optimized k-means clustering (to be uploaded...)
+
+step 1: load a sysmetrical square matrix, e.g., the reduced-rank correlation matrix of the NRW motorway network for workdays
+
+```
+load('redcorr_workday.mat')
+Mat=redcorr_workday;
+```
+![](imagesc/matrix_ungrouped.pdf)
+
+
 
 ### Reference
 
