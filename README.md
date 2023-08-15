@@ -1,10 +1,16 @@
 # Tutorial for using optimized k-means clustering
+(Matlab version)
 
 Shanshan Wang \
 shanshan.wang@uni-due.de
 </br>
 </br>
 
+---
+For python code in a simplified version, please visit
+https://shannwang.github.io/Optimized_kmeans_clustering/optimized_kmeans_clustering_python.html
+
+---
 
 #### Step 1: load a sysmetrical square matrix, e.g., the reduced-rank correlation matrix of the NRW motorway network for workdays
 
@@ -69,7 +75,6 @@ figure(5)
 PlotSilhouette(orderclusteridx, sil);
 ~~~
 <img src="https://github.com/shannwang/Optimized_kmeans_clustering/raw/main/silhouette_reordered.png?raw=true" width="600"> 
-
 
 
 
